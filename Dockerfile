@@ -9,9 +9,11 @@ RUN apk update && apk add libpng-dev libjpeg-turbo-dev openldap-dev libpng libjp
         && apk del libpng-dev libjpeg-turbo-dev openldap-dev \
         && rm /var/cache/apk/*
 
+COPY nginx.conf /etc/nginx/conf.d/dolibarr.conf
 ADD htdocs.tar.gz /var/www/html/
 RUN mkdir /var/www/html/documents
 RUN chown -hR root:root /var/www/html
 RUN chown www-data:www-data /var/www/html/documents
 
+VOLUME /etc/nginx/conf.d
 VOLUME /var/www/html
