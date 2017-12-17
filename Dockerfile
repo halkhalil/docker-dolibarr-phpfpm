@@ -11,9 +11,10 @@ RUN apk update && apk add libpng-dev libjpeg-turbo-dev openldap-dev libpng libjp
 
 COPY nginx.conf /etc/nginx/conf.d/dolibarr.conf
 ADD htdocs.tar.gz /var/www/html/
-RUN mkdir /var/www/html/documents
+COPY conf.php /var/www/html/conf/conf.php
 RUN chown -hR root:root /var/www/html
-RUN chown www-data:www-data /var/www/html/documents
+RUN mkdir /documents
+RUN chown www-data:www-data /documents
 
 VOLUME /etc/nginx/conf.d
 VOLUME /var/www/html

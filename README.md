@@ -25,3 +25,23 @@ its
 
 This configuration assumes the Dolibarr PHP-FPM container is reachable through
 name "dolibarr" (which can be enforces with a link).
+
+## Documents directory
+
+The documents directory is `/documents`. If you want to keep data between
+launches of the container, please mount an external volume on this directory.
+
+If you don't use specific templates, it may not be mandatory: Dolibarr can
+regenerate documents (but it is not an ideal setup)
+
+## Dolibarr configuration
+
+Dolibarr configuration must be provided with environment variables:
+
+* `URL_ROOT`: URL on which Dolibarr is accessed
+* `DB_HOST`: Database hostname
+* `DB_PORT` (optional): Dabase port (defaults to 3306)
+* `DB_NAME`: Database name
+* `DB_USER`: Database username
+* `DB_PASS`: Database password
+* `DB_TYPE` (optional): Database type (defaults to mysqli, may be set to pgsql)
