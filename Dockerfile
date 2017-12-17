@@ -9,6 +9,7 @@ RUN apk update && apk add libpng-dev libjpeg-turbo-dev openldap-dev libpng libjp
         && apk del libpng-dev libjpeg-turbo-dev openldap-dev \
         && rm /var/cache/apk/*
 
+COPY dolibarr.sh /usr/local/bin/dolibarr.sh
 COPY nginx.conf /etc/nginx/conf.d/dolibarr.conf
 ADD htdocs.tar.gz /var/www/html/
 COPY conf.php /var/www/html/conf/conf.php
@@ -18,3 +19,5 @@ RUN chown www-data:www-data /documents
 
 VOLUME /etc/nginx/conf.d
 VOLUME /var/www/html
+
+ENTRYPOINT ["dolibarr.sh"]
