@@ -1,7 +1,5 @@
 # Dolibarr with PHP-FPM on Docker
 
-WORK IN PROGRESS
-
 This image provides Dolibarr with PHP-FPM, based on a lightweight Alpine image.
 Its goals are:
 
