@@ -1,4 +1,6 @@
 #!/bin/sh
+#
+# Update the Dolibarr version in this docker image
 
 echo "Please download the latest version of Dolibarr from:"
 echo "https://sourceforge.net/projects/dolibarr/files/"

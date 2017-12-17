@@ -45,3 +45,10 @@ Dolibarr configuration must be provided with environment variables:
 * `DB_USER`: Database username
 * `DB_PASS`: Database password
 * `DB_TYPE`: Database type ("mysqli" or "pgsql")
+* `COOKIE_CRYPT_KEY`: A random crypt key for the cookies
+
+The crypt key may be generated with the following command:
+
+```
+dd if=/dev/urandom bs=1024 count=10 2>/dev/null | md5sum | cut -f1 -d' '
+```
