@@ -16,7 +16,7 @@ orders order
 products product
 projects project
 proposals proposal
-tasks task_sommary
+tasks task_summary
 thirdparties thirdparty
 usergroups usergroups
 users user" | while read line
