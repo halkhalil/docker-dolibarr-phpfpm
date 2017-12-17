@@ -8,17 +8,17 @@ $dolibarr_main_data_root = '/documents';
 
 // Database
 $dolibarr_main_db_host = getenv('DB_HOST');
-$dolibarr_main_db_port = getenv('DB_PORT') ?? '3306';
+$dolibarr_main_db_port = getenv('DB_PORT');
 $dolibarr_main_db_name = getenv('DB_NAME');
 $dolibarr_main_db_user = getenv('DB_USER');
 $dolibarr_main_db_pass = getenv('DB_PASS');
-$dolibarr_main_db_type = getenv('DB_TYPE') ?? 'mysqli';
+$dolibarr_main_db_type = getenv('DB_TYPE');
 $dolibarr_main_db_character_set = 'utf8';
 $dolibarr_main_db_collation = 'utf8_unicode_ci';
 
 // Security stuff
 $dolibarr_main_authentication = 'dolibarr';
-$dolibarr_main_force_https = '0'; // HTTPS should be enforced in the reverse proxy
+$dolibarr_main_force_https = '0'; // HTTPS should be enforced on the reverse proxy
 $dolibarr_main_prod = '0';
 $dolibarr_main_restrict_os_commands = 'mysqldump, mysql, pg_dump, pgrestore';
 $dolibarr_nocsrfcheck = '0';
