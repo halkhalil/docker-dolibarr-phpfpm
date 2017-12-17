@@ -17,3 +17,11 @@ This image is way smaller than an image built with the official Dolibarr
 can use the official nginx:alpine webserver, which is very small too (less than
 20 MB).
 
+## NginX configuration
+
+This image provides an NginX configuration, which works with the nginx:alpine
+image. Just use VolumesFrom, and NginX has access to its configuration and
+its 
+
+This configuration assumes the Dolibarr PHP-FPM container is reachable through
+name "dolibarr" (which can be enforces with a link).
