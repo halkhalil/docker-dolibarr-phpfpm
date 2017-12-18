@@ -34,6 +34,12 @@ launches of the container, please mount an external volume on this directory.
 If you don't use specific templates, this volume may not be mandatory: Dolibarr
 can regenerate documents afterwards (but it is not an ideal setup).
 
+### Overlay
+
+The documents directory may contain a subdirectory named `overlay`. When such
+a subdirectory exists, its content is copied on top of the Dolibarr htdocs
+installation each time the container starts.
+
 ## Dolibarr configuration
 
 Dolibarr configuration must be provided with environment variables:

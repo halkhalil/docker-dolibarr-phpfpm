@@ -28,4 +28,11 @@ do
 done
 chown -R www-data.www-data /documents
 
+# Then, copy the overlay data
+if [ -d /documents/overlay ]
+then
+    cp -r /documents/overlay/* /var/www/html/
+fi
+
+# Finally, start PHP-FPM
 docker-php-entrypoint php-fpm
