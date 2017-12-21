@@ -1,12 +1,17 @@
 # Dolibarr with PHP-FPM on Docker
 
+
+A ready-to-use Docker image is available
+[https://hub.docker.com/r/smaccagnoni/dolibarr-phpfpm/](on docker hub). Use
+`smaccagnoni/dolibarr-phpfpm` as the image name when running a Docker container.
+
 This image provides Dolibarr with PHP-FPM, based on a lightweight Alpine image.
 Its goals are:
 
 * to provide an image as light as possible
 * to be able to use it with NginX instead of Apache
 
-The image initialization process is based on the official Dolibarr dockerfile,
+The image preparation process is based on the official Dolibarr dockerfile,
 with a little bit more security (specifically, files that do not need to be
 modified are owned by root instead of www-data).
 
@@ -24,7 +29,7 @@ image. Just use VolumesFrom, and NginX has access to its configuration and
 its 
 
 This configuration assumes the Dolibarr PHP-FPM container is reachable through
-name "dolibarr" (which can be enforces with a link).
+name "dolibarr" (which can be enforced with a link).
 
 ## Documents directory
 
