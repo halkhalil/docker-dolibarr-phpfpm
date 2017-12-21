@@ -15,7 +15,7 @@ This image is way smaller than an image built with the official Dolibarr (~280MB
 
 ## NginX configuration
 
-This image provides an NginX configuration, which works with the nginx:alpine image. Just use VolumesFrom, and NginX has access to its configuration and its 
+This image provides an NginX configuration, which works with the nginx:alpine image. Just use VolumesFrom, and NginX has access to its configuration and its web root.
 
 This configuration assumes the Dolibarr PHP-FPM container is reachable through name "dolibarr" (which can be enforced with a link).
 
