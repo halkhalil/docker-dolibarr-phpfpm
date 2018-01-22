@@ -1,4 +1,4 @@
-FROM php:fpm-alpine
+FROM php:7.1-fpm-alpine
 
 RUN apk update && apk add libpng-dev libjpeg-turbo-dev openldap-dev libpng libjpeg-turbo libldap \
         && docker-php-ext-configure gd --with-png-dir=/usr --with-jpeg-dir=/usr \
